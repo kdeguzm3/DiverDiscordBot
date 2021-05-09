@@ -21,8 +21,6 @@ module.exports = {
             Attempts: 6`)
         }
 
-        console.log(hiLoGame.numberOfAttempts, hiLoGame.numberToGuess)
-
         if (hiLoGame.numberOfAttempts === 0 || hiLoGame.numberToGuess === 0) {
             reset()
             return
@@ -47,7 +45,7 @@ module.exports = {
         }
 
         if (guess == hiLoGame.numberToGuess) {
-            msg.channel.send(`That's correct!  You win!  You had ${hiLoGame.numberOfAttempts} left.  Type 'hilo' to play again`)
+            msg.channel.send(`That's correct!  You win!  You had ${hiLoGame.numberOfAttempts} guesses left.  Type 'hilo' to play again`)
             hiLoGame.numberOfAttempts = 0
         }
 
